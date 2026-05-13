@@ -2,8 +2,6 @@
 
 **An agentic AI system that analyzes synthetic SMF Type 80 (RACF) logs to detect security incidents, perform threat hunting, and recommend z/OS-specific remediation steps.**
 
-Welcome to the MainframeSecurityAiZOsRacfLogAnalysis Crew project, powered by [crewAI](https://crewai.com).
-
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
 [![crewAI](https://img.shields.io/badge/crewAI-0.51+-orange.svg)](https://www.crewai.com/)
 [![RAG](https://img.shields.io/badge/RAG-Enabled-green.svg)]()
