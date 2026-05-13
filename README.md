@@ -32,20 +32,6 @@ This project demonstrates how to apply agentic AI (crewAI + RAG) to interpret co
 - **Data**: Synthetic SMF Type 80 (RACF) logs in JSON/CSV
 - **Languages**: Python 3.11+
 
-## 📁 Project Structure
-mainframe-racf-siem-agent/
-├── mock_mainframe_smf.py          # Synthetic log generator (with attack injection)
-├── src/
-│   ├── agents/                    # Log Parser, Threat Hunter, Incident Responder
-│   ├── tools/
-│   ├── knowledge_base/            # IBM Redbooks + MITRE ATT&CK documents
-│   └── workflows/
-├── synthetic_smf_logs.json
-├── synthetic_smf_logs.csv
-├── README.md
-└── requirements.txt
-
-
 ## 🚀 Quick Start
 
 1. **Clone the repo**
