@@ -2,8 +2,6 @@
 
 **An agentic AI system that analyzes synthetic SMF Type 80 (RACF) logs to detect security incidents, perform threat hunting, and recommend z/OS-specific remediation steps.**
 
-Welcome to the MainframeSecurityAiZOsRacfLogAnalysis Crew project, powered by [crewAI](https://crewai.com).
-
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
 [![crewAI](https://img.shields.io/badge/crewAI-0.51+-orange.svg)](https://www.crewai.com/)
 [![RAG](https://img.shields.io/badge/RAG-Enabled-green.svg)]()
@@ -14,17 +12,17 @@ Welcome to the MainframeSecurityAiZOsRacfLogAnalysis Crew project, powered by [c
 
 Bridge **legacy z/OS mainframe security** (RACF + SMF logging) with **modern AI-driven SIEM** capabilities.
 
-This project demonstrates how to apply agentic AI (crewAI + RAG) to interpret complex mainframe security logs — a rare and highly valuable skill in federal, financial, and enterprise environments.
+This project demonstrates how to apply agentic AI (crewAI + RAG) to interpret complex mainframe security logs - a rare and highly valuable skill in federal, financial, and enterprise environments.
 
 ## ✨ Key Features
 
-- **Synthetic SMF/RACF Log Generator** — Creates realistic logs with injected attack scenarios (brute-force, access violations, privilege escalation)
+- **Synthetic SMF/RACF Log Generator** - Creates realistic logs with injected attack scenarios (brute-force, access violations, privilege escalation)
 - **Multi-Agent AI Workflow**:
-  - **Log Parser Agent** — Ingests and structures raw SMF-style logs
-  - **Threat Hunter Agent** — Uses RAG to match events against known mainframe attack patterns
-  - **Incident Responder Agent** — Generates plain-language summaries and z/OS remediation commands (JCL/TSO)
-- **Knowledge Base** — IBM Redbooks, RACF best practices, and MITRE ATT&CK for z/OS / Mainframe
-- **Professional Reporting** — Clean, audit-ready incident reports
+  - **Log Parser Agent** - Ingests and structures raw SMF-style logs
+  - **Threat Hunter Agent** - Uses RAG to match events against known mainframe attack patterns
+  - **Incident Responder Agent** - Generates plain-language summaries and z/OS remediation commands (JCL/TSO)
+- **Knowledge Base** - IBM Redbooks, RACF best practices, and MITRE ATT&CK for z/OS / Mainframe
+- **Professional Reporting** - Clean, audit-ready incident reports
 
 ## 🛠️ Tech Stack
 
@@ -33,20 +31,6 @@ This project demonstrates how to apply agentic AI (crewAI + RAG) to interpret co
 - **RAG**: Chroma vector database
 - **Data**: Synthetic SMF Type 80 (RACF) logs in JSON/CSV
 - **Languages**: Python 3.11+
-
-## 📁 Project Structure
-mainframe-racf-siem-agent/
-├── mock_mainframe_smf.py          # Synthetic log generator (with attack injection)
-├── src/
-│   ├── agents/                    # Log Parser, Threat Hunter, Incident Responder
-│   ├── tools/
-│   ├── knowledge_base/            # IBM Redbooks + MITRE ATT&CK documents
-│   └── workflows/
-├── synthetic_smf_logs.json
-├── synthetic_smf_logs.csv
-├── README.md
-└── requirements.txt
-
 
 ## 🚀 Quick Start
 
@@ -61,7 +45,7 @@ mainframe-racf-siem-agent/
 3. **Generate synthetic logs**
    python mock_mainframe_smf.py
 
-4. **Run the AI Agent (coming soon — currently building)**
+4. **Run the AI Agent (coming soon - currently building)**
    python run_agent.py
 
 ### Installation
