@@ -12,17 +12,17 @@
 
 Bridge **legacy z/OS mainframe security** (RACF + SMF logging) with **modern AI-driven SIEM** capabilities.
 
-This project demonstrates how to apply agentic AI (crewAI + RAG) to interpret complex mainframe security logs — a rare and highly valuable skill in federal, financial, and enterprise environments.
+This project demonstrates how to apply agentic AI (crewAI + RAG) to interpret complex mainframe security logs - a rare and highly valuable skill in federal, financial, and enterprise environments.
 
 ## ✨ Key Features
 
-- **Synthetic SMF/RACF Log Generator** — Creates realistic logs with injected attack scenarios (brute-force, access violations, privilege escalation)
+- **Synthetic SMF/RACF Log Generator** - Creates realistic logs with injected attack scenarios (brute-force, access violations, privilege escalation)
 - **Multi-Agent AI Workflow**:
-  - **Log Parser Agent** — Ingests and structures raw SMF-style logs
-  - **Threat Hunter Agent** — Uses RAG to match events against known mainframe attack patterns
-  - **Incident Responder Agent** — Generates plain-language summaries and z/OS remediation commands (JCL/TSO)
-- **Knowledge Base** — IBM Redbooks, RACF best practices, and MITRE ATT&CK for z/OS / Mainframe
-- **Professional Reporting** — Clean, audit-ready incident reports
+  - **Log Parser Agent** - Ingests and structures raw SMF-style logs
+  - **Threat Hunter Agent** - Uses RAG to match events against known mainframe attack patterns
+  - **Incident Responder Agent** - Generates plain-language summaries and z/OS remediation commands (JCL/TSO)
+- **Knowledge Base** - IBM Redbooks, RACF best practices, and MITRE ATT&CK for z/OS / Mainframe
+- **Professional Reporting** - Clean, audit-ready incident reports
 
 ## 🛠️ Tech Stack
 
@@ -45,7 +45,7 @@ This project demonstrates how to apply agentic AI (crewAI + RAG) to interpret co
 3. **Generate synthetic logs**
    python mock_mainframe_smf.py
 
-4. **Run the AI Agent (coming soon — currently building)**
+4. **Run the AI Agent (coming soon - currently building)**
    python run_agent.py
 
 ### Installation
