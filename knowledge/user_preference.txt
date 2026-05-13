@@ -1,0 +1,6 @@
+User name is Gerald Soco.
+User is a Cybersecurity Analyst with 16+ years of experience in mainframe security (z/OS, RACF, SMF logging).
+User specializes in bridging legacy mainframe environments with modern AI and cloud security tools.
+User is currently building a Mainframe RACF SIEM Intelligence Agent using CrewAI and Gemini to analyze synthetic SMF Type 80 logs, perform threat hunting, and generate actionable RACF remediation steps.
+User is focused on federal/government cybersecurity roles, FedRAMP, NIST compliance, and demonstrating practical mainframe security + AI skills.
+User is based in Longmont, Colorado.

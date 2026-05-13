@@ -1,0 +1,71 @@
+---
+parse_smf_type_80_logs:
+  description: "Analyze the provided synthetic SMF Type 80 (RACF) log data. The CSV
+    data contains columns: timestamp, record_type, user_id, event_code, event_description,
+    resource_name, return_code, ip_address, system_id, job_name, success.\n\nParse
+    each record and identify:\n- Failed login attempts and patterns  \n- Privilege
+    escalation attempts (event_code 18)\n- Unauthorized access attempts (event_code
+    14)\n- Suspicious user activities (HACKER01, BRUTEFORCE accounts)\n- Cross-system
+    activities\n- Resource access patterns to sensitive datasets (APF.LIBRARY, RACF.PROFILE,
+    SYS1.*)\n\nFocus on analyzing the uploaded synthetic log data that contains over
+    1000 security events. Structure the findings for threat analysis focusing on security
+    incidents and anomalous patterns."
+  expected_output: |-
+    A structured analysis report containing:
+    1. Summary statistics of log entries by event type and user
+    2. Identified suspicious activities and attack patterns
+    3. Critical security events requiring immediate attention
+    4. User behavior analysis highlighting anomalies
+    5. System-by-system security event breakdown
+    6. Timeline of significant security incidents
+    7. List of compromised or suspicious user accounts
+  agent: smf_type_80_racf_log_analyst
+threat_hunting_and_incident_detection:
+  description: "Perform comprehensive threat hunting on the parsed SMF Type 80 (RACF)
+    security events. \nFocus on real mainframe attack patterns including:\n- Brute-force
+    logon attempts (multiple failed logons)\n- Unauthorized dataset/profile access
+    attempts\n- RACF return code violations (especially RC=8 and RC=12)\n- Suspicious
+    TSO, batch, or started task activity\n- Privilege escalation or special attribute
+    usage\n- Unusual user behavior or shared user accounts\n\nUse knowledge from MITRE
+    ATT&CK for Mainframes/z/OS and IBM RACF Security Redbooks to identify suspicious
+    patterns. \nAssign severity levels and clearly explain why each event is suspicious."
+  expected_output: |-
+    A clear, professional threat hunting report with the following sections:
+
+    1. **Summary of Findings** – Number of suspicious events by severity
+    2. **Identified Security Incidents** – List each incident with:
+       - Timestamp(s)
+       - User ID(s) involved
+       - Event description
+       - MITRE ATT&CK technique (if applicable)
+       - Severity (Critical / High / Medium / Low)
+    3. **Indicators of Compromise (IoCs)**
+    4. **Recommended Immediate Actions** – Specific RACF commands where possible
+    5. **Investigation Priorities** – What should be checked next
+  agent: z_os_racf_threat_hunter
+  context:
+  - parse_smf_type_80_logs
+generate_actionable_remediation:
+  description: |-
+    For every identified security incident from the threat hunting step, generate clear, safe, and immediately actionable remediation steps focused on RACF security.
+
+    Prioritize practical z/OS RACF commands including:
+    - REVOKE / PERMIT commands
+    - SETROPTS changes
+    - SEARCH FILTER commands for investigation
+    - Password policy or user attribute corrections
+    - Dataset / General Resource profile adjustments
+
+    Keep all recommendations production-safe, following IBM RACF best practices. Do not generate full JCL jobs unless absolutely necessary.
+  expected_output: |-
+    A professional, concise remediation report with the following sections:
+    1. **Executive Summary** – Brief overview of required actions
+    2. **Prioritized Remediation Steps** – Listed by severity
+    3. **Specific RACF Commands** – Ready-to-run TSO commands for each incident
+    4. **Investigation Commands** – Useful SEARCH and LIST commands
+    5. **Verification Steps** – How to confirm the fix worked
+    6. **Additional Recommendations** – Longer-term improvements (if applicable)
+  agent: z_os_security_remediation_engineer
+  context:
+  - parse_smf_type_80_logs
+  - threat_hunting_and_incident_detection
